@@ -58,6 +58,24 @@
   margin-block-end: 100px;
 }
 
+.modal {
+  border: 2px solid var(--text-color, #000000);
+  padding: 25px 30px;
+  color: var(--text-color, #000000);
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--page-background-color, #ffffff);
+  max-inline-size: 355px;
+}
+
+.modal[open] {
+  display: grid;
+  /* Safari fix */
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+
 .modal::backdrop {
   opacity: 0.75;
   background: var(--color-black, #000000);
@@ -316,6 +334,7 @@
 .button__icon {
   color: var(--button-text-color, #ffffff);
   mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 
@@ -354,6 +373,6 @@
   .card__img-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
-    text-shadow: 1px var(--page-background-color, #ffffff);
+    text-stroke: 1px var(--page-background-color, #ffffff);
   }
 }
